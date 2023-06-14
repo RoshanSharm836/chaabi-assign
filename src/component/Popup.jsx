@@ -29,7 +29,7 @@ function Popup({ wpm, total, correct, wronge, setWpmchecker, data }) {
           Reset
         </button>
       </div>
-      <img src="../Typing-cuate.svg" alt="" width="35%" />
+      <img src="../t.svg" alt="" width="35%" />
 
       <span
         onClick={() => {

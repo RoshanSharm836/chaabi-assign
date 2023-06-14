@@ -23,7 +23,7 @@ export default function Input() {
       return () => clearInterval(interval);
     } else if (seconds === 0) {
       // to calculate wpm and other thing
-      setAnswer(Math.floor(keysPressed.join("").split(" ").length)); // combining into array and then knowing the length
+      setAnswer(Math.floor(keysPressed.join("").split(" ").length)); // making array of words and finding length
       setWpmchecker(true);
       textarea.current.value = "";
       console.log("answer", answer);
@@ -100,26 +100,29 @@ export default function Input() {
         })}
       </div>
       <div className="Ans">
-        <label style={{ color: "white" }} htmlFor="">
-          Set Time
-        </label>
-        <select
-          name="time"
-          id="time"
-          onChange={(e) => {
-            setSeconds(e.target.value * 60);
-          }}
-        >
-          <option value="1">1</option>
-          <option value="3">3</option>
-          <option value="5">5</option>
-        </select>
         <div>
           <span>Correct Words:{correct}</span>
           <span>Wronge Words:{wronge}</span>
           <span>Total Words:{count}</span>
           {wpmchecker ? <span>Wpm:{answer}</span> : ""}
           <span>Timer:{seconds}'s</span>
+          <div>
+            <label style={{ padding: "0 5px" }} htmlFor="">
+              Set Time
+            </label>
+            <select
+              style={{ padding: "5px" }}
+              name="time"
+              id="time"
+              onChange={(e) => {
+                setSeconds(e.target.value * 60);
+              }}
+            >
+              <option value="1">1</option>
+              <option value="3">3</option>
+              <option value="5">5</option>
+            </select>
+          </div>
         </div>
       </div>
       {/* <div className="box">{keysPressed}</div> */}

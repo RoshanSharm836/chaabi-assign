@@ -104,7 +104,7 @@ textarea {
   border-radius: 2.5px;
 }
 
-.Ans div {
+.Ans > div {
   display: flex;
   justify-content: space-around;
   margin-top: 50px;
@@ -162,6 +162,7 @@ textarea {
   height: 40px;
   padding: 10px;
   cursor: pointer;
+  color: white;
 }
 
 .highlight {
